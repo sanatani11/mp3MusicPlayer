@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="@id/player"
+        android:layout_marginTop="0dp"
+        android:background="@color/Cornsilk" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:id="@+id/player"
+        android:layout_below="@+id/recycler_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_alignParentEnd="true"
+        android:background="@color/LightGoldenrodYellow"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/currsong"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:textColor="@color/Maroon"
+            android:text="No Songs Selected"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Chocolate"
+                android:text="0:00"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/prestime"/>
+            <SeekBar
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/seekbar"
+                android:outlineAmbientShadowColor="@color/DarkRed"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Chocolate"
+                android:text="0:00"
+                android:layout_marginRight="10dp"
+                android:id="@+id/totaltime"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="PREVIOUS"
+                android:id="@+id/prev"
+                android:onClick="previous"
+                android:textColor="@color/DarkRed"
+                android:layout_margin="9dp"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="PLAY"
+                android:id="@+id/play"
+                android:onClick="play"
+                android:textColor="@color/DarkRed"
+                android:layout_margin="9dp"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="NEXT"
+                android:id="@+id/next"
+                android:textColor="@color/DarkRed"
+                android:onClick="next"
+                android:layout_margin="9dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
